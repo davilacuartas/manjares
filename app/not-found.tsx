@@ -1,8 +1,13 @@
-export default function NotFound() {
+import { ReactNode } from 'react';
+
+export default function NotFound(): ReactNode {
   return (
-    <div style={{ padding: 40, textAlign: "center" }}>
-      <h1 style={{ fontSize: 24, fontWeight: "bold" }}>Página no encontrada</h1>
-      <p>Lo sentimos, esta página no existe.</p>
+    <div className="flex min-h-screen flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold">404</h1>
+      <p className="mt-4 text-lg">Página no encontrada</p>
+      <a href="/" className="mt-6 text-blue-600 hover:underline">
+        Volver al inicio
+      </a>
     </div>
   );
 }
